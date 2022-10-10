@@ -1,0 +1,19 @@
+---
+roles:
+- src: datadog.datadog
+  version: 4.16.0
+- src: git+https://github.com/LookBehind/ansible-consul.git
+  name: ansible-consul
+- src: git+https://github.com/ahuffman/ansible-sudoers.git
+  name: ansible-sudoers
+  version: a3155be58ef8cf0dd4a91cf44557ca2266057710
+- src: geerlingguy.filebeat
+- src: geerlingguy.kibana
+#- src: geerlingguy.logstash
+- src: elastic.beats
+  version: v7.15.1
+- src: elastic.elasticsearch
+  version: v7.15.1
+
+collections:
+  - name: community.general

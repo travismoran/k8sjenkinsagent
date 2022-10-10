@@ -1,0 +1,5 @@
+---
+roles:
+- src: git+https://github.com/LookBehind/ansible-consul.git
+  name: ansible-consul
+

@@ -1,0 +1,5 @@
+---
+roles:
+- src: geerlingguy.filebeat
+- src: geerlingguy.kibana
+

@@ -1,0 +1,6 @@
+---
+roles:
+- src: git+https://github.com/ahuffman/ansible-sudoers.git
+  name: ansible-sudoers
+  version: a3155be58ef8cf0dd4a91cf44557ca2266057710
+

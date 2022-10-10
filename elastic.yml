@@ -1,0 +1,7 @@
+---
+roles:
+- src: elastic.beats
+  version: v7.15.1
+- src: elastic.elasticsearch
+  version: v7.15.1
+
