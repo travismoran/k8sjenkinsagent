@@ -16,6 +16,16 @@ RUN echo 'deb http://ppa.launchpad.net/ansible/ansible/ubuntu bionic main' >> /e
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
 RUN apt-get -y update
 RUN apt-get -y install ansible
+# python dependencies
+RUN apt-get -y install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev wget libbz2-dev wget
+RUN wget https://www.python.org/ftp/python/3.10.0/Python-3.10.0.tgz && tar -xvf Python-3.10.0.tgz && cd Python-3.10.0 && ./configure --enable-optimizations && make -j 2 && make altinstall
+RUN apt-get -y install python3-pip
+RUN pip install regex linecache2 slack_sdk
+
+# uncomment if you need vim or nano
+#RUN apt-get -y install vim
+#RUN apt-get -y install nano
+
 
 # Add Maven
 #RUN apt-get -y install maven --no-install-recommends
