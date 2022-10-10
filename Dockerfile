@@ -45,6 +45,7 @@ COPY ansible-sudoers.yml  	/tmp/ansible-sudoers.yml
 COPY datadog.yml  		/tmp/datadog.yml
 COPY elastic.yml  		/tmp/elastic.yml
 COPY geerlingguy.yml  		/tmp/geerlingguy.yml
+COPY sac.py 			/usr/bin/sac
 
 RUN ps aux | grep -i apt
 RUN curl -sL https://aka.ms/InstallAzureCLIDeb | bash
